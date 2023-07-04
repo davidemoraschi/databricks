@@ -1,6 +1,6 @@
 -- start query 1 in stream 0 using template query1.tpl
-USE CATALOG hive_metastore;
-USE SCHEMA relational_fit_cvut_cz;
+--USE CATALOG hive_metastore;
+--USE SCHEMA relational_fit_cvut_cz;
 WITH customer_total_return 
      AS (SELECT sr_customer_sk     AS ctr_customer_sk, 
                 sr_store_sk        AS ctr_store_sk, 
