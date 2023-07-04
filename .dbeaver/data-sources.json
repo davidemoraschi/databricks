@@ -1,0 +1,107 @@
+{
+	"folders": {},
+	"connections": {
+		"BCFFA20C-B87D-C937-E8F5-0E0094F153A2-18920a2a4ad-6c39cae0729538cf": {
+			"provider": "generic",
+			"driver": "BCFFA20C-B87D-C937-E8F5-0E0094F153A2",
+			"name": "adb-2006501677761283.3.azuredatabricks.net",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"url": "jdbc:databricks://adb-2006501677761283.3.azuredatabricks.net:443/default;transportMode=http;ssl=1;AuthMech=3;httpPath=/sql/1.0/warehouses/2dccbc5670b07fa3;",
+				"type": "dev",
+				"properties": {
+					"RowsFetchedPerBlock": "100",
+					"CatalogSchemaSwitch": "0"
+				},
+				"auth-model": "native",
+				"bootstrap": {
+					"defaultCatalog": "hive_metastore",
+					"defaultSchema": "relational_fit_cvut_cz",
+					"query": [
+						"USE CATALOG hive_metastore;",
+						"USE SCHEMA relational_fit_cvut_cz;"
+					]
+				}
+			},
+			"filters": [
+				{
+					"type": "org.jkiss.dbeaver.model.struct.rdb.DBSSchema",
+					"enabled": true,
+					"include": [
+						"relational_fit_cvut_cz"
+					]
+				},
+				{
+					"type": "org.jkiss.dbeaver.model.struct.rdb.DBSCatalog",
+					"enabled": true,
+					"include": [
+						"hive_metastore"
+					]
+				}
+			]
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	},
+	"drivers": {
+		"generic": {
+			"BCFFA20C-B87D-C937-E8F5-0E0094F153A2": {
+				"provider": "generic",
+				"id": "BCFFA20C-B87D-C937-E8F5-0E0094F153A2",
+				"name": "DatabricksJDBC42-2.6.33.1055",
+				"class": "com.databricks.client.jdbc.Driver",
+				"custom": true,
+				"embedded": false,
+				"anonymous": false,
+				"allowsEmptyPassword": false,
+				"instantiable": true,
+				"libraries": {},
+				"driver-parameters": {
+					"read-only-data": "false",
+					"supports-indexes": "true",
+					"all-objects-pattern": "%",
+					"quote-reserved-words": "true",
+					"omit-schema": "false",
+					"supports-table-constraints": "true",
+					"schema-filters-enabled": "false",
+					"script-delimiter-redefiner": ";",
+					"supports-struct-cache": "true",
+					"supports-truncate": "true",
+					"read-only-meta-data": "false",
+					"omit-type-cache": "false",
+					"split-procedures-and-functions": "false",
+					"supports-stored-code": "true",
+					"supports-references": "true",
+					"omit-catalog-name": "false",
+					"omit-single-catalog": "false",
+					"ddl-drop-column-brackets": "false",
+					"omit-single-schema": "false",
+					"supports-scroll": "false",
+					"omit-catalog": "false",
+					"supports-views": "true",
+					"script-delimiter": ";",
+					"legacy-sql-dialect": "false",
+					"script-delimiter-after-query": "false",
+					"use-search-string-escape": "false",
+					"supports-multiple-results": "false",
+					"script-delimiter-after-block": "false",
+					"supports-set-array": "false",
+					"alter-table-add-column": "false",
+					"ddl-drop-column-short": "false",
+					"supports-limits": "true",
+					"supports-select-count": "true"
+				}
+			}
+		}
+	}
+}
