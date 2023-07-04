@@ -1,4 +1,5 @@
 -- start query 2 in stream 0 using template query2.tpl  
+-- comment to commit
 WITH wscs 
      AS (SELECT sold_date_sk, 
                 sales_price 
